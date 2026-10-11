@@ -1,0 +1,109 @@
+
+/* =====================================================
+   CHATKARO — BASE
+===================================================== */
+
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* HTML */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+
+/* Root */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    Arial,
+    sans-serif;
+}
+
+
+/* Body */
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+  line-height: 1.5;
+}
+
+
+/* Text selection */
+
+::selection {
+  background: var(--brand-soft);
+  color: var(--brand-strong);
+}
+
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Form elements */
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+
+/* Buttons */
+
+button {
+  cursor: pointer;
+}
+
+
+/* Keyboard focus */
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+
+/* =====================================================
+   SHARED AVATAR STYLE
+===================================================== */
+
+.chat-user-avatar,
+.chat-window-avatar,
+.message-sender-avatar,
+.sidebar-avatar-default,
+.header-avatar-default,
+.profile-avatar-default,
+.settings-avatar-default,
+.profile-component-avatar-default {
+  background: var(--brand);
+  color: #fff;
+  font-weight: 700;
+}
+

@@ -1,0 +1,699 @@
+/* =====================================================
+   CHATKARO — DARK MODE
+===================================================== */
+
+html.dark-mode {
+  --ink: #f1f5f9;
+  --ink-2: #cbd5e1;
+  --ink-3: #94a3b8;
+
+  --line: #334155;
+
+  --paper: #0f172a;
+  --surface: #1e293b;
+  --sunken: #172033;
+
+  --brand: #14b8a6;
+  --brand-strong: #0d9488;
+  --brand-soft: #123b3a;
+
+  --deep: #020617;
+  --deep-2: #172033;
+
+  --accent: #818cf8;
+  --accent-soft: #20254a;
+  --accent-ink: #a5b4fc;
+
+  --danger-soft: #3b1d24;
+
+  --shadow-sm:
+    0 1px 2px rgba(0, 0, 0, 0.30);
+
+  --shadow-md:
+    0 4px 12px rgba(0, 0, 0, 0.35);
+
+  --shadow-lg:
+    0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* =====================================================
+   BODY
+===================================================== */
+
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode #root {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+html.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+html.dark-mode ::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 999px;
+}
+
+html.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* =====================================================
+   APP LAYOUT
+===================================================== */
+
+html.dark-mode .chat-page,
+html.dark-mode .chat-page-main {
+  background: var(--paper);
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+html.dark-mode .app-header {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .header-title,
+html.dark-mode .header-user-info strong {
+  color: var(--ink);
+}
+
+html.dark-mode .header-user-info span {
+  color: var(--ink-3);
+}
+
+html.dark-mode .header-menu-btn,
+html.dark-mode .header-profile {
+  color: var(--ink-2);
+}
+
+html.dark-mode .header-menu-btn:hover,
+html.dark-mode .header-profile:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+html.dark-mode .sidebar {
+  background: var(--deep);
+}
+
+html.dark-mode .sidebar-logo {
+  border-color: #1e293b;
+}
+
+html.dark-mode .sidebar-logo-text {
+  color: #f8fafc;
+}
+
+html.dark-mode .sidebar-nav-item {
+  color: #cbd5e1;
+}
+
+html.dark-mode .sidebar-nav-item:hover {
+  background: #172033;
+  color: #fff;
+}
+
+html.dark-mode .sidebar-nav-item.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+html.dark-mode .sidebar-user {
+  border-color: #1e293b;
+}
+
+html.dark-mode .sidebar-user-details strong {
+  color: #f8fafc;
+}
+
+html.dark-mode .sidebar-user-details span {
+  color: #94a3b8;
+}
+
+html.dark-mode .sidebar-logout {
+  color: #cbd5e1;
+}
+
+html.dark-mode .sidebar-logout:hover {
+  background: #3b1d24;
+  color: #fca5a5;
+}
+
+/* =====================================================
+   CHAT USERS
+===================================================== */
+
+html.dark-mode .chat-users-list {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .chat-users-title,
+html.dark-mode .chat-users-title h2 {
+  color: var(--ink);
+}
+
+html.dark-mode .chat-user-item {
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .chat-user-item:hover {
+  background: var(--sunken);
+}
+
+html.dark-mode .chat-user-item.active {
+  background: var(--brand-soft);
+}
+
+html.dark-mode .chat-user-info strong {
+  color: var(--ink);
+}
+
+html.dark-mode .chat-user-info span {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   CHAT WINDOW
+===================================================== */
+
+html.dark-mode .chat-main-window,
+html.dark-mode .chat-window {
+  background: var(--paper);
+}
+
+html.dark-mode .chat-window-header {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .chat-window-user-info h3 {
+  color: var(--ink);
+}
+
+html.dark-mode .chat-window-user-info span {
+  color: var(--ink-3);
+}
+
+html.dark-mode .chat-window-actions button {
+  color: var(--ink-2);
+}
+
+html.dark-mode .chat-window-actions button:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+html.dark-mode .chat-window-body {
+  background: var(--paper);
+}
+
+html.dark-mode .chat-window-footer {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+/* =====================================================
+   EMPTY CHAT
+===================================================== */
+
+html.dark-mode .chat-window-empty {
+  background: var(--paper);
+}
+
+html.dark-mode .chat-empty-state,
+html.dark-mode .welcome-chat {
+  color: var(--ink);
+}
+
+html.dark-mode .chat-empty-state h2,
+html.dark-mode .welcome-chat h2 {
+  color: var(--ink);
+}
+
+html.dark-mode .chat-empty-state p,
+html.dark-mode .welcome-chat p {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   MESSAGE INPUT
+===================================================== */
+
+html.dark-mode .message-input {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .message-input textarea {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+html.dark-mode .message-input textarea::placeholder {
+  color: var(--ink-3);
+}
+
+html.dark-mode .message-input textarea:focus {
+  border-color: var(--brand);
+}
+
+html.dark-mode .message-input-attach {
+  color: var(--ink-2);
+}
+
+html.dark-mode .message-input-attach:hover {
+  background: var(--sunken);
+  color: var(--brand);
+}
+
+/* =====================================================
+   MESSAGE BUBBLES
+===================================================== */
+
+html.dark-mode .message-bubble {
+  box-shadow: none;
+}
+
+html.dark-mode .message-bubble-other {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .message-bubble-other .message-text {
+  color: var(--ink);
+}
+
+html.dark-mode .message-bubble-own {
+  background: var(--brand-strong);
+  color: #fff;
+}
+
+html.dark-mode .message-sender-name {
+  color: var(--ink-3);
+}
+
+html.dark-mode .message-meta {
+  color: #94a3b8;
+}
+
+html.dark-mode .message-status {
+  color: #94a3b8;
+}
+
+/* =====================================================
+   REPLY PREVIEW
+===================================================== */
+
+html.dark-mode .message-reply-preview {
+  background: #172033;
+  border-color: var(--brand);
+}
+
+html.dark-mode .message-reply-preview strong {
+  color: var(--brand);
+}
+
+html.dark-mode .message-reply-preview span {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   MESSAGE ACTIONS
+===================================================== */
+
+html.dark-mode .message-actions-trigger {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink-2);
+}
+
+html.dark-mode .message-actions-trigger:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+html.dark-mode .message-actions-menu {
+  background: var(--surface);
+  border-color: var(--line);
+  box-shadow: var(--shadow-lg);
+}
+
+html.dark-mode .message-actions-menu button {
+  color: var(--ink-2);
+}
+
+html.dark-mode .message-actions-menu button:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+html.dark-mode .message-quick-reactions {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .message-quick-reactions button:hover {
+  background: var(--sunken);
+}
+
+/* =====================================================
+   SELECTED FILE
+===================================================== */
+
+html.dark-mode .selected-file {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink-2);
+}
+
+html.dark-mode .selected-file button {
+  color: var(--ink-3);
+}
+
+html.dark-mode .selected-file button:hover {
+  color: var(--danger);
+}
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+html.dark-mode .profile-page {
+  background: var(--paper);
+}
+
+html.dark-mode .profile-card,
+html.dark-mode .profile-detail-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .profile-info h1,
+html.dark-mode .profile-detail-card h3 {
+  color: var(--ink);
+}
+
+html.dark-mode .profile-email,
+html.dark-mode .profile-bio,
+html.dark-mode .profile-meta {
+  color: var(--ink-3);
+}
+
+html.dark-mode .profile-detail-row {
+  border-color: var(--line);
+}
+
+html.dark-mode .profile-detail-row strong {
+  color: var(--ink-2);
+}
+
+html.dark-mode .profile-detail-row span {
+  color: var(--ink-3);
+}
+
+html.dark-mode .profile-stat {
+  border-color: var(--line);
+}
+
+html.dark-mode .profile-stat strong {
+  color: var(--ink);
+}
+
+html.dark-mode .profile-stat span {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   PROFILE COMPONENT
+===================================================== */
+
+html.dark-mode .profile-component-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .profile-component-info h2 {
+  color: var(--ink);
+}
+
+html.dark-mode .profile-component-email,
+html.dark-mode .profile-component-bio,
+html.dark-mode .profile-component-meta {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   EDIT PROFILE
+===================================================== */
+
+html.dark-mode .edit-profile {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .edit-profile-header h2 {
+  color: var(--ink);
+}
+
+html.dark-mode .edit-profile-field label {
+  color: var(--ink-2);
+}
+
+html.dark-mode .edit-profile-field input,
+html.dark-mode .edit-profile-field textarea {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .edit-profile-field input::placeholder,
+html.dark-mode .edit-profile-field textarea::placeholder {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   SETTINGS
+===================================================== */
+
+html.dark-mode .settings-page {
+  background: var(--paper);
+}
+
+html.dark-mode .settings-header h1 {
+  color: var(--ink);
+}
+
+html.dark-mode .settings-header p {
+  color: var(--ink-3);
+}
+
+html.dark-mode .settings-card {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .settings-card-header {
+  border-color: var(--line);
+}
+
+html.dark-mode .settings-card-header h2 {
+  color: var(--ink);
+}
+
+html.dark-mode .settings-card-header p {
+  color: var(--ink-3);
+}
+
+html.dark-mode .settings-avatar-section {
+  background: var(--paper);
+}
+
+html.dark-mode .settings-avatar-content h3 {
+  color: var(--ink);
+}
+
+html.dark-mode .settings-avatar-content p {
+  color: var(--ink-3);
+}
+
+html.dark-mode .settings-field label {
+  color: var(--ink-2);
+}
+
+html.dark-mode .settings-field small {
+  color: var(--ink-3);
+}
+
+html.dark-mode .settings-field input,
+html.dark-mode .settings-field textarea {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .settings-field input::placeholder,
+html.dark-mode .settings-field textarea::placeholder {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+html.dark-mode .modal {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .modal-header {
+  border-color: var(--line);
+}
+
+html.dark-mode .modal-header h2 {
+  color: var(--ink);
+}
+
+html.dark-mode .modal-close {
+  color: var(--ink-3);
+}
+
+html.dark-mode .modal-close:hover {
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+html.dark-mode .modal-footer {
+  border-color: var(--line);
+}
+
+html.dark-mode .modal-field label {
+  color: var(--ink-2);
+}
+
+html.dark-mode .modal-field input,
+html.dark-mode .modal-field textarea,
+html.dark-mode .modal-field select {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .modal-field input::placeholder,
+html.dark-mode .modal-field textarea::placeholder {
+  color: var(--ink-3);
+}
+
+html.dark-mode .modal-btn-secondary {
+  background: var(--sunken);
+  color: var(--ink-2);
+}
+
+html.dark-mode .modal-btn-secondary:hover {
+  background: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .group-member-list {
+  border-color: var(--line);
+}
+
+html.dark-mode .group-member-item {
+  border-color: var(--line);
+}
+
+html.dark-mode .group-member-item:hover {
+  background: var(--sunken);
+}
+
+html.dark-mode .group-member-item.selected {
+  background: var(--brand-soft);
+}
+
+html.dark-mode .group-member-info strong {
+  color: var(--ink);
+}
+
+html.dark-mode .group-member-info span {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   AUTH
+===================================================== */
+
+html.dark-mode .auth-page {
+  background:
+    linear-gradient(
+      135deg,
+      var(--paper) 0%,
+      var(--surface) 50%,
+      var(--brand-soft) 100%
+    );
+}
+
+html.dark-mode .auth-page-container {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+html.dark-mode .auth-page-form {
+  background: var(--surface);
+}
+
+html.dark-mode .auth-page-form .login-card h1 {
+  color: var(--ink);
+}
+
+html.dark-mode .auth-page-form .subtitle {
+  color: var(--ink-3);
+}
+
+html.dark-mode .auth-page-form input {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+html.dark-mode .auth-page-form input::placeholder {
+  color: var(--ink-3);
+}
+
+html.dark-mode .auth-page-form .signup-link {
+  color: var(--ink-3);
+}
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+html.dark-mode .message-list-empty,
+html.dark-mode .message-list-loading {
+  color: var(--ink-3);
+}
+
+html.dark-mode .settings-loading,
+html.dark-mode .profile-loading {
+  color: var(--brand);
+}

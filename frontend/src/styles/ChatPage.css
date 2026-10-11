@@ -1,0 +1,566 @@
+/* =====================================================
+   CHATKARO — GROUPS SECTION
+===================================================== */
+
+.group-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.group-section-title h2 {
+  margin: 0;
+}
+
+/* Create Group button */
+
+.group-section-title button {
+  border: none;
+  background: var(--brand);
+  color: #ffffff;
+
+  padding: 7px 11px;
+  border-radius: var(--r-md);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background var(--ease),
+    transform var(--ease),
+    box-shadow var(--ease);
+}
+
+.group-section-title button:hover {
+  background: var(--brand-strong);
+
+  transform: translateY(-1px);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.group-section-title button:active {
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   GROUP LIST
+===================================================== */
+
+.chat-users-list {
+  overflow-y: auto;
+}
+
+.chat-users-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-users-list::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: var(--r-pill);
+}
+
+.chat-users-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* =====================================================
+   GROUP ITEM
+===================================================== */
+
+.chat-users-list .chat-user-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 14px;
+
+  border: none;
+  border-bottom: 1px solid var(--line);
+
+  background: transparent;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background var(--ease),
+    transform var(--ease);
+}
+
+.chat-users-list .chat-user-item:hover {
+  background: var(--sunken);
+}
+
+.chat-users-list .chat-user-item.active {
+  background: var(--brand-soft);
+}
+
+
+/* =====================================================
+   GROUP AVATAR
+===================================================== */
+
+.chat-users-list .chat-user-avatar-default {
+  width: 44px;
+  height: 44px;
+
+  min-width: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--brand);
+
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 800;
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* =====================================================
+   GROUP USER INFO
+===================================================== */
+
+.chat-users-list .chat-user-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  overflow: hidden;
+}
+
+.chat-users-list .chat-user-info strong {
+  color: var(--ink);
+
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-users-list .chat-user-info span {
+  color: var(--ink-3);
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* =====================================================
+   EMPTY GROUP MESSAGE
+===================================================== */
+
+.groups-empty {
+  margin: 12px 14px;
+
+  padding: 14px;
+
+  border: 1px dashed var(--line);
+  border-radius: var(--r-lg);
+
+  background: var(--surface);
+
+  color: var(--ink-3);
+
+  font-size: 13px;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   LOADING GROUPS
+===================================================== */
+
+.chat-users-list > p {
+  margin: 12px 14px;
+
+  color: var(--ink-3);
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   CREATE GROUP CONTAINER
+===================================================== */
+
+.create-group {
+  margin: 10px 12px 14px;
+
+  padding: 16px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--r-lg);
+
+  box-shadow: var(--shadow-md);
+}
+
+.create-group-header {
+  margin-bottom: 14px;
+}
+
+.create-group-header h2 {
+  margin: 0 0 5px;
+
+  color: var(--ink);
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.create-group-header p {
+  margin: 0;
+
+  color: var(--ink-3);
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =====================================================
+   CREATE GROUP FORM
+===================================================== */
+
+.create-group-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.create-group-field {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.create-group-field label {
+  color: var(--ink);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.create-group-field input,
+.create-group-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px 11px;
+
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  font-family: inherit;
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color var(--ease),
+    box-shadow var(--ease),
+    background var(--ease);
+}
+
+.create-group-field input:focus,
+.create-group-field textarea:focus {
+  border-color: var(--brand);
+
+  background: var(--surface);
+
+  box-shadow:
+    0 0 0 3px rgba(20, 184, 166, 0.12);
+}
+
+.create-group-field textarea {
+  min-height: 90px;
+
+  resize: vertical;
+}
+
+.create-group-field input::placeholder,
+.create-group-field textarea::placeholder {
+  color: var(--ink-3);
+}
+
+.create-group-field small {
+  align-self: flex-end;
+
+  color: var(--ink-3);
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   CREATE GROUP ACTIONS
+===================================================== */
+
+.create-group-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  margin-top: 3px;
+}
+
+.create-group-actions button {
+  border: none;
+
+  padding: 9px 13px;
+
+  border-radius: var(--r-md);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background var(--ease),
+    transform var(--ease);
+}
+
+.create-group-cancel {
+  background: var(--sunken);
+
+  color: var(--ink-2);
+}
+
+.create-group-cancel:hover {
+  background: var(--line);
+}
+
+.create-group-submit {
+  background: var(--brand);
+
+  color: #ffffff;
+}
+
+.create-group-submit:hover {
+  background: var(--brand-strong);
+
+  transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   GROUP CREATE SUCCESS / ERROR
+===================================================== */
+
+.create-group-error,
+.create-group-success {
+  margin-bottom: 12px;
+
+  padding: 9px 11px;
+
+  border-radius: var(--r-md);
+
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.create-group-error {
+  background: var(--danger-soft);
+
+  color: var(--danger);
+}
+
+.create-group-success {
+  background: #dcfce7;
+
+  color: var(--ok);
+}
+
+
+/* =====================================================
+   GROUP ACTIVE STATE
+===================================================== */
+
+.chat-users-list .chat-user-item.active .chat-user-avatar-default {
+  background: var(--brand-strong);
+}
+
+.chat-users-list .chat-user-item.active .chat-user-info strong {
+  color: var(--brand-strong);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+  .group-section-title {
+    padding: 10px 12px;
+  }
+
+  .group-section-title button {
+    padding: 6px 9px;
+
+    font-size: 11px;
+  }
+
+  .create-group {
+    margin: 8px 10px 12px;
+
+    padding: 13px;
+  }
+
+  .chat-users-list .chat-user-item {
+    padding: 9px 11px;
+  }
+
+  .chat-users-list .chat-user-avatar-default {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+
+    font-size: 15px;
+  }
+}
+
+
+/* Group header right side */
+.group-header-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Three-line menu */
+.group-header-menu-btn {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: #0f172a;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.group-header-menu-btn span {
+  width: 19px;
+  height: 2px;
+  border-radius: 5px;
+  background: #e2e8f0;
+  transition: 0.2s ease;
+}
+
+.group-header-menu-btn:hover {
+  background: #134e4a;
+  border-color: #14b8a6;
+}
+
+.group-header-menu-btn:hover span {
+  background: #5eead4;
+}
+
+/* Dropdown */
+.group-header-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 2000;
+  width: 200px;
+  padding: 7px;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  background: #111827;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+  animation: groupMenuOpen 0.16s ease;
+}
+
+.group-header-dropdown button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 12px;
+  border: none;
+  border-radius: 9px;
+  background: transparent;
+  color: #e2e8f0;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.group-header-dropdown button > span {
+  width: 22px;
+  text-align: center;
+}
+
+.group-header-dropdown button:hover,
+.group-header-dropdown button.active {
+  background: #134e4a;
+  color: #5eead4;
+}
+
+@keyframes groupMenuOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .group-header-menu-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .group-header-dropdown {
+    width: 185px;
+  }
+}
+

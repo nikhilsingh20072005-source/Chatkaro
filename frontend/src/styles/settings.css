@@ -1,0 +1,637 @@
+
+/* =========================================
+   CHATKARO SETTINGS PAGE
+========================================= */
+
+.settings-page {
+  min-height: calc(100vh - var(--header-h, 68px));
+  padding: 32px 24px 48px;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(20, 184, 166, 0.07),
+      transparent 35%
+    ),
+    var(--paper, #f8fafc);
+  color: var(--ink, #0f172a);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.settings-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.settings-header {
+  margin-bottom: 28px;
+}
+
+.settings-header h1 {
+  margin: 0 0 8px;
+  color: var(--ink, #0f172a);
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.settings-header p {
+  margin: 0;
+  color: var(--ink-3, #64748b);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   SUCCESS AND ERROR MESSAGES
+========================================= */
+
+.settings-success,
+.settings-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.settings-success {
+  color: #15803d;
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.settings-error {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* =========================================
+   SETTINGS CARDS
+========================================= */
+
+.settings-card {
+  margin-bottom: 24px;
+  padding: 28px;
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md, 0 4px 12px rgba(15, 23, 42, 0.07));
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.25s ease;
+}
+
+.settings-card:hover {
+  border-color: rgba(20, 184, 166, 0.35);
+  box-shadow: var(--shadow-lg, 0 16px 40px rgba(15, 23, 42, 0.10));
+}
+
+.settings-card-header {
+  margin-bottom: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line, #e2e8f0);
+}
+
+.settings-card-header h2 {
+  margin: 0 0 8px;
+  color: var(--ink, #0f172a);
+  font-size: 20px;
+  font-weight: 750;
+  letter-spacing: -0.3px;
+}
+
+.settings-card-header p {
+  margin: 0;
+  color: var(--ink-3, #64748b);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   PROFILE AVATAR SECTION
+========================================= */
+
+.settings-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--sunken, #f1f5f9);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 16px;
+}
+
+.settings-avatar-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 104px;
+  height: 104px;
+}
+
+.settings-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--surface, #ffffff);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+}
+
+.settings-avatar-default {
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #14b8a6,
+    #0f766e
+  );
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.settings-avatar-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.68);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.settings-avatar-content {
+  min-width: 0;
+}
+
+.settings-avatar-content h3 {
+  margin: 0 0 7px;
+  color: var(--ink, #0f172a);
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.settings-avatar-content p {
+  margin: 0 0 14px;
+  color: var(--ink-3, #64748b);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.settings-avatar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 10px 15px;
+  color: #ffffff;
+  background: var(--brand-strong, #0d9488);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.settings-avatar-btn:hover {
+  background: #0f766e;
+  box-shadow: 0 5px 14px rgba(13, 148, 136, 0.22);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.settings-field label {
+  color: var(--ink, #0f172a);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.settings-field input,
+.settings-field textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 13px 15px;
+  color: var(--ink, #0f172a);
+  background: var(--surface, #ffffff);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 11px;
+  outline: none;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.settings-field input {
+  min-height: 48px;
+}
+
+.settings-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.settings-field input::placeholder,
+.settings-field textarea::placeholder {
+  color: var(--ink-3, #64748b);
+  opacity: 0.75;
+}
+
+.settings-field input:focus,
+.settings-field textarea:focus {
+  border-color: var(--brand, #14b8a6);
+  box-shadow: 0 0 0 4px rgba(20, 184, 166, 0.12);
+}
+
+.settings-field input:disabled,
+.settings-field textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.settings-field small {
+  align-self: flex-end;
+  color: var(--ink-3, #64748b);
+  font-size: 12px;
+}
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.settings-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 12px 22px;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    #14b8a6,
+    #0d9488
+  );
+  border: none;
+  border-radius: 11px;
+  box-shadow: 0 5px 14px rgba(13, 148, 136, 0.18);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.settings-primary-btn:hover:not(:disabled) {
+  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.28);
+  transform: translateY(-2px);
+}
+
+.settings-primary-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.settings-primary-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+/* =========================================
+   APPEARANCE SETTINGS
+========================================= */
+
+.settings-appearance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.settings-appearance-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.settings-appearance-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--sunken, #f1f5f9);
+  border: 1px solid var(--line, #e2e8f0);
+  border-radius: 14px;
+  font-size: 23px;
+}
+
+.settings-appearance-info h3 {
+  margin: 0 0 5px;
+  color: var(--ink, #0f172a);
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.settings-appearance-info p {
+  margin: 0;
+  color: var(--ink-3, #64748b);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   NIGHT MODE TOGGLE
+========================================= */
+
+.theme-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 62px;
+  height: 34px;
+  padding: 4px;
+  background: #cbd5e1;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.2s ease;
+}
+
+.theme-toggle-active {
+  background: var(--brand-strong, #0d9488);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid rgba(20, 184, 166, 0.35);
+  outline-offset: 3px;
+}
+
+.theme-toggle-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.16);
+  font-size: 14px;
+  transform: translateX(0);
+  transition: transform 0.25s ease;
+}
+
+.theme-toggle-active .theme-toggle-circle {
+  transform: translateX(27px);
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.settings-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 24px;
+  color: var(--ink-2, #475569);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================================
+   DARK MODE
+   Works with html.dark-mode
+========================================= */
+
+html.dark-mode .settings-success {
+  color: #86efac;
+  background: #14291e;
+  border-color: #245236;
+}
+
+html.dark-mode .settings-error {
+  color: #fca5a5;
+  background: #351c23;
+  border-color: #6b2735;
+}
+
+html.dark-mode .settings-avatar-btn:hover {
+  background: #0f766e;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .settings-page {
+    padding: 24px 18px 36px;
+  }
+
+  .settings-card {
+    padding: 23px;
+    border-radius: 17px;
+  }
+
+  .settings-header {
+    margin-bottom: 23px;
+  }
+
+  .settings-avatar-section {
+    gap: 18px;
+    padding: 17px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .settings-page {
+    padding: 20px 12px 30px;
+  }
+
+  .settings-header h1 {
+    font-size: 27px;
+  }
+
+  .settings-header p {
+    font-size: 13px;
+  }
+
+  .settings-card {
+    margin-bottom: 17px;
+    padding: 18px 15px;
+    border-radius: 15px;
+  }
+
+  .settings-card-header {
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+
+  .settings-card-header h2 {
+    font-size: 18px;
+  }
+
+  .settings-card-header p {
+    font-size: 12px;
+  }
+
+  .settings-avatar-section {
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 11px;
+  }
+
+  .settings-avatar-wrapper,
+  .settings-avatar {
+    width: 76px;
+    height: 76px;
+  }
+
+  .settings-avatar {
+    border-width: 3px;
+  }
+
+  .settings-avatar-default {
+    font-size: 29px;
+  }
+
+  .settings-avatar-content h3 {
+    font-size: 14px;
+  }
+
+  .settings-avatar-content p {
+    font-size: 12px;
+  }
+
+  .settings-avatar-btn {
+    min-height: 36px;
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .settings-field {
+    gap: 7px;
+    margin-bottom: 18px;
+  }
+
+  .settings-field input {
+    min-height: 45px;
+  }
+
+  .settings-field input,
+  .settings-field textarea {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .settings-primary-btn {
+    width: 100%;
+    min-height: 45px;
+  }
+
+  .settings-appearance-row {
+    gap: 12px;
+  }
+
+  .settings-appearance-info {
+    gap: 10px;
+  }
+
+  .settings-appearance-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+  }
+
+  .settings-appearance-info h3 {
+    font-size: 14px;
+  }
+
+  .settings-appearance-info p {
+    font-size: 11px;
+  }
+
+  .theme-toggle {
+    width: 56px;
+    height: 32px;
+  }
+
+  .theme-toggle-circle {
+    width: 24px;
+    height: 24px;
+  }
+
+  .theme-toggle-active .theme-toggle-circle {
+    transform: translateX(23px);
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .settings-page *,
+  .settings-page *::before,
+  .settings-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+

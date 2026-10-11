@@ -1,0 +1,53 @@
+
+/* =====================================================
+   CHATKARO — DESIGN VARIABLES
+===================================================== */
+
+:root {
+  /* Text colors */
+  --ink: #0f172a;
+  --ink-2: #475569;
+  --ink-3: #64748b;
+
+  /* Borders and backgrounds */
+  --line: #e2e8f0;
+  --paper: #f8fafc;
+  --surface: #ffffff;
+  --sunken: #f1f5f9;
+
+  /* Brand colors */
+  --brand: #14b8a6;
+  --brand-strong: #0d9488;
+  --brand-soft: #ccfbf1;
+
+  /* Sidebar colors */
+  --deep: #0f172a;
+  --deep-2: #1e293b;
+
+  /* Accent colors */
+  --accent: #6366f1;
+  --accent-soft: #eef2ff;
+  --accent-ink: #4338ca;
+
+  /* Status colors */
+  --ok: #16a34a;
+  --danger: #dc2626;
+  --danger-soft: #fee2e2;
+
+  /* Border radius */
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-pill: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 16px 40px rgba(15, 23, 42, 0.10);
+
+  /* Layout */
+  --header-h: 68px;
+
+  /* Animation */
+  --ease: 0.15s ease;
+}

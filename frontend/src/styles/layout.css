@@ -1,0 +1,33 @@
+
+/* =====================================================
+   CHATKARO — APP LAYOUT
+===================================================== */
+
+.chat-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.chat-page-main {
+  flex: 1;
+  min-width: 0;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--paper);
+}
+
+.chat-page-content {
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+
+  overflow: hidden;
+}
+

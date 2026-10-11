@@ -1,0 +1,463 @@
+/* =====================================================
+   CHATKARO — RESPONSIVE
+===================================================== */
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+  /* Sidebar */
+  .sidebar {
+    width: 230px;
+  }
+
+  /* Home */
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .home-content {
+    text-align: center;
+  }
+
+  .home-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-chat-preview {
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+  }
+
+  .home-features {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+/* =====================================================
+   TABLET / MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+  /* -------------------------------------------------
+     CHAT
+  ------------------------------------------------- */
+
+  .chat-page-content {
+    position: relative;
+  }
+
+  .chat-users-list {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .chat-main-window {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+
+    background: var(--surface);
+  }
+
+  .chat-window-header {
+    padding: 0 14px;
+  }
+
+  .chat-window-body {
+    padding: 14px;
+  }
+
+  .chat-window-footer {
+    padding: 8px;
+  }
+
+  /* -------------------------------------------------
+     MESSAGES
+  ------------------------------------------------- */
+
+  .message-wrapper {
+    padding: 0 10px;
+    gap: 7px;
+  }
+
+  .message-content-wrapper {
+    max-width: 82%;
+  }
+
+  .message-sender-avatar {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+
+    font-size: 12px;
+  }
+
+  .message-bubble {
+    padding: 8px 10px 6px;
+
+    border-radius: 16px;
+  }
+
+  .message-text {
+    font-size: 14px;
+  }
+
+  .message-sender-name {
+    font-size: 11px;
+  }
+
+  .message-image {
+    max-width: 230px;
+    max-height: 280px;
+  }
+
+  .message-actions-trigger {
+    width: 25px;
+    height: 25px;
+
+    font-size: 19px;
+  }
+
+  .message-quick-reactions {
+    padding: 2px 4px;
+  }
+
+  .message-quick-reactions button {
+    width: 25px;
+    height: 25px;
+
+    font-size: 14px;
+  }
+
+  .message-actions-menu {
+    min-width: 145px;
+  }
+
+  .message-bubble-ai {
+    max-width: 88%;
+  }
+
+  .ai-message-avatar {
+    width: 34px;
+    height: 34px;
+
+    font-size: 18px;
+  }
+
+  .message-bubble-ai .message-text {
+    font-size: 14px;
+  }
+
+  /* -------------------------------------------------
+     PROFILE + SETTINGS
+  ------------------------------------------------- */
+
+  .profile-page,
+  .settings-page {
+    padding: 18px;
+  }
+
+  .profile-cover {
+    height: 160px;
+  }
+
+  .profile-avatar-wrapper {
+    width: 120px;
+    height: 120px;
+
+    transform: translateY(60px);
+  }
+
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-avatar-default {
+    font-size: 45px;
+  }
+
+  .profile-info {
+    padding: 78px 20px 28px;
+  }
+
+  .profile-info h1 {
+    font-size: 25px;
+  }
+
+  .profile-meta {
+    gap: 8px;
+  }
+
+  .profile-meta span {
+    font-size: 12px;
+  }
+
+  .profile-details {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-edit-btn,
+  .profile-chat-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Settings */
+
+  .settings-header h1 {
+    font-size: 30px;
+  }
+
+  .settings-card {
+    padding: 22px;
+  }
+
+  .settings-avatar-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settings-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Compact profile */
+
+  .profile-component {
+    padding: 25px 15px;
+  }
+
+  .profile-component-card {
+    padding: 35px 20px;
+
+    border-radius: var(--r-lg);
+  }
+
+  .profile-component-info h2 {
+    font-size: 25px;
+  }
+
+  .profile-component-actions {
+    flex-direction: column;
+  }
+
+  .profile-component-edit,
+  .profile-component-chat {
+    width: 100%;
+  }
+
+  /* Edit profile */
+
+  .edit-profile {
+    margin: 20px 15px;
+    padding: 28px 20px;
+
+    border-radius: var(--r-lg);
+  }
+
+  .edit-profile-header h2 {
+    font-size: 24px;
+  }
+
+  .edit-profile-actions {
+    flex-direction: column-reverse;
+  }
+
+  .edit-profile-cancel,
+  .edit-profile-save {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+  /* -------------------------------------------------
+     SIDEBAR / HEADER
+  ------------------------------------------------- */
+
+  .sidebar {
+    display: none;
+  }
+
+  .header-menu-btn {
+    display: block;
+  }
+
+  .app-header {
+    padding: 0 15px;
+  }
+
+  .header-user-info {
+    display: none;
+  }
+
+  .header-title {
+    font-size: 18px;
+  }
+
+  /* -------------------------------------------------
+     AUTH
+  ------------------------------------------------- */
+
+  .auth-page {
+    padding: 15px;
+  }
+
+  .auth-page-container {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .auth-page-brand {
+    min-height: 260px;
+
+    padding: 35px;
+  }
+
+  .auth-page-brand h1 {
+    font-size: 36px;
+  }
+
+  .auth-page-form {
+    padding: 35px 25px;
+  }
+
+  /* -------------------------------------------------
+     HOME
+  ------------------------------------------------- */
+
+  .home-navbar {
+    padding: 0 20px;
+  }
+
+  .home-content h1 {
+    font-size: 42px;
+  }
+
+  .home-nav-links {
+    gap: 10px;
+  }
+
+  .home-nav-links > a:first-child {
+    display: none;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .chat-window-header {
+    padding: 0 10px;
+  }
+
+  .chat-window-body {
+    padding: 10px;
+  }
+
+  .message-wrapper {
+    padding: 0 6px;
+  }
+
+  .message-content-wrapper {
+    max-width: 86%;
+  }
+
+  .message-bubble {
+    max-width: 100%;
+  }
+
+  .message-input {
+    gap: 6px;
+  }
+
+  .message-input textarea {
+    font-size: 14px;
+  }
+
+  .message-input-attach,
+  .message-input-send {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home-content h1 {
+    font-size: 34px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+  }
+
+  .home-buttons a,
+  .home-buttons button {
+    width: 100%;
+  }
+
+  .profile-page,
+  .settings-page {
+    padding: 12px;
+  }
+
+  .settings-card {
+    padding: 18px;
+  }
+}
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media (max-width: 360px) {
+  .header-title {
+    font-size: 16px;
+  }
+
+  .chat-window-user-info h3 {
+    font-size: 14px;
+  }
+
+  .message-content-wrapper {
+    max-width: 90%;
+  }
+
+  .message-text {
+    font-size: 13px;
+  }
+
+  .home-content h1 {
+    font-size: 30px;
+  }
+
+  .auth-page-form {
+    padding: 25px 15px;
+  }
+}
