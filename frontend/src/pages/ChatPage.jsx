@@ -41,6 +41,9 @@ const ChatPage = () => {
   const [mobileMenuOpen, setMobileMenuOpen] =
     useState(false);
 
+  const [mobileView, setMobileView] =
+    useState("list");
+
   const [searchQuery, setSearchQuery] =
     useState("");
 
@@ -68,7 +71,7 @@ const ChatPage = () => {
   const [aiLoading, setAiLoading] =
     useState(false);
 
-    const [showGroupMenu, setShowGroupMenu] = useState(false);
+  const [showGroupMenu, setShowGroupMenu] = useState(false);
 
   /*
   ==========================================
@@ -344,6 +347,7 @@ const ChatPage = () => {
       setLoadingMessages(false);
     }
   };
+  setMobileView("chat");
 
   /*
   ==========================================
@@ -1553,7 +1557,11 @@ const ChatPage = () => {
               LEFT USERS / GROUPS
           ================================= */}
 
-          <div className="chat-users-list">
+          <div className={`chat-users-list ${mobileView === "list"
+              ? "mobile-visible"
+              : "mobile-hidden"
+            }`}
+          >
 
             <div className="chat-users-title">
               <h2>
@@ -1646,8 +1654,8 @@ const ChatPage = () => {
                         }
                         type="button"
                         className={`chat-user-item ${active
-                            ? "active"
-                            : ""
+                          ? "active"
+                          : ""
                           }`}
                         onClick={() =>
                           handleSelectGroup(
@@ -1694,8 +1702,8 @@ const ChatPage = () => {
             <button
               type="button"
               className={`chat-user-item chatkaro-ai-item ${selectedUser?.isAI
-                  ? "active"
-                  : ""
+                ? "active"
+                : ""
                 }`}
               onClick={
                 handleSelectAI
@@ -1773,8 +1781,8 @@ const ChatPage = () => {
                       key={id}
                       type="button"
                       className={`chat-user-item ${active
-                          ? "active"
-                          : ""
+                        ? "active"
+                        : ""
                         }`}
                       onClick={() =>
                         handleSelectUser(
@@ -1832,145 +1840,159 @@ const ChatPage = () => {
               RIGHT SIDE
           ================================= */}
 
-          <div className="chat-main-window">
+          <div className={`chat-main-window ${mobileView === "chat"
+              ? "mobile-visible"
+              : "mobile-hidden"
+            }`}>
+            <button
+              type="button"
+              className="mobile-chat-back"
+              onClick={() => setMobileView("list")}
+            >
+              ← Back to Chats
+            </button>
+          </div>
 
-           
 
 
 
 
 
-            {/* =================================
+          {/* =================================
                 GROUP INFO
             ================================= */}
 
-            {selectedUser?.isGroup &&
-              groupView ===
-              "info" ? (
-              <GroupInfo
-                group={
-                  selectedUser
-                }
-                onClose={() =>
-                  setGroupView(
-                    "chat"
-                  )
-                }
-              />
-            ) : selectedUser?.isGroup &&
-              groupView ===
-              "members" ? (
-              <GroupMembers
-                members={
-                  groupMembers
-                }
-                currentUser={
-                  user
-                }
-                onRemove={
-                  handleRemoveGroupMember
-                }
-                onSelect={
-                  handleSelectGroupMember
-                }
-              />
-            ) : selectedUser?.isGroup &&
-              groupView ===
-              "settings" ? (
-              <GroupSettings
-                group={
-                  selectedUser
-                }
-                onSuccess={
-                  handleGroupUpdated
-                }
-                onDelete={
-                  handleDeleteGroup
-                }
-              />
+          {selectedUser?.isGroup &&
+            groupView ===
+            "info" ? (
+            <GroupInfo
+              group={
+                selectedUser
+              }
+              onClose={() =>
+                setGroupView(
+                  "chat"
+                )
+
+              }
+
+            />
+
+          ) : selectedUser?.isGroup &&
+            groupView ===
+            "members" ? (
+            <GroupMembers
+              members={
+                groupMembers
+              }
+              currentUser={
+                user
+              }
+              onRemove={
+                handleRemoveGroupMember
+              }
+              onSelect={
+                handleSelectGroupMember
+              }
+            />
+
+          ) : selectedUser?.isGroup &&
+            groupView ===
+            "settings" ? (
+            <GroupSettings
+              group={
+                selectedUser
+              }
+              onSuccess={
+                handleGroupUpdated
+              }
+              onDelete={
+                handleDeleteGroup
+              }
+            />
 
 
-            ) : (
-              <ChatWindow
-                selectedUser={
-                  selectedUser
-                }
+          ) : (
+            <ChatWindow
+              selectedUser={
+                selectedUser
+              }
 
-                messages={
-                  messages
-                }
+              messages={
+                messages
+              }
 
-                currentUser={
-                  user
-                }
+              currentUser={
+                user
+              }
 
-                messageText={
-                  messageText
-                }
+              messageText={
+                messageText
+              }
 
-                setMessageText={
-                  setMessageText
-                }
+              setMessageText={
+                setMessageText
+              }
 
-                onSendMessage={
-                  handleSendMessage
-                }
+              onSendMessage={
+                handleSendMessage
+              }
 
-                onTyping={
-                  handleTyping
-                }
+              onTyping={
+                handleTyping
+              }
 
-                onStopTyping={
-                  handleStopTyping
-                }
+              onStopTyping={
+                handleStopTyping
+              }
 
-                onReply={
-                  handleReply
-                }
+              onReply={
+                handleReply
+              }
 
-                onEdit={
-                  handleEdit
-                }
+              onEdit={
+                handleEdit
+              }
 
-                onDelete={
-                  handleDelete
-                }
+              onDelete={
+                handleDelete
+              }
 
-                onReaction={
-                  handleReaction
-                }
+              onReaction={
+                handleReaction
+              }
 
-                typingUser={
-                  null
-                }
+              typingUser={
+                null
+              }
 
-                loading={
-                  loadingMessages ||
-                  aiLoading
-                }
+              loading={
+                loadingMessages ||
+                aiLoading
+              }
 
-                onAskAI={
-                  handleAskAI
-                }
+              onAskAI={
+                handleAskAI
+              }
 
-                aiLoading={
-                  aiLoading
-                }
+              aiLoading={
+                aiLoading
+              }
 
-                groupView={groupView}
-                onGroupViewChange={setGroupView}
+              groupView={groupView}
+              onGroupViewChange={setGroupView}
 
-                
-              />
-            )}
 
-          </div>
-
-        </main>
+            />
+          )}
 
       </div>
 
-    </div>
+    </main>
+
+      </div >
+
+    </div >
   );
 };
 
