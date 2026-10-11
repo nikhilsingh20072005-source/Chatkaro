@@ -38,6 +38,16 @@ const FRONTEND_URL =
   process.env.FRONTEND_URL ||
   "http://localhost:5173";
 
+  app.use(
+    cors({
+      origin: [
+        "http://localhost:5173",
+        "https://chatkaro-frontend-33cz.onrender.com",
+      ],
+      credentials: true,
+    })
+  );
+
 const MONGO_URI = process.env.MONGO_URL;
 
 if (!MONGO_URI) {
